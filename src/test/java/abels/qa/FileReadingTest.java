@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FileReadingTest {
 
     ClassLoader classLoader = FileReadingTest.class.getClassLoader();
-    String zipName = "files/test_files.zip";
+    String zipName = "files/test-files.zip";
 
     @Test
     @DisplayName("Reading and verifying a PDF file from a ZIP archive")
