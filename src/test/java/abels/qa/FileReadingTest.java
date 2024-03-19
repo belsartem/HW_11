@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FileReadingTest {
 
     ClassLoader classLoader = FileReadingTest.class.getClassLoader();
-    String zipName = "files/test-files.zip";
+    String zipName = "files/test_files.zip";
 
     @Test
     @DisplayName("Reading and verifying a PDF file from a ZIP archive")
@@ -77,7 +77,7 @@ public class FileReadingTest {
     @Test
     @DisplayName("Reading and verifying a JSON file")
     void jsonReadingTest() throws Exception {
-        try (InputStream inputStream = classLoader.getResourceAsStream("files/person.json");
+        try (InputStream inputStream = classLoader.getResourceAsStream("files/person_.json");
              Reader reader = new InputStreamReader(inputStream)) {
             ObjectMapper objectMapper = new ObjectMapper();
             Person person = objectMapper.readValue(reader, Person.class);
